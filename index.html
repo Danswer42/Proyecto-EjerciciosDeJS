@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Juego Piedra, papel o tijeras--> 
+  <div class="bg-blue-950 p-3">
+    <h1 class="flex justify-center text-3xl pb-3 font-bold text-white"> Piedra | Papel | Tijeras </h1> 
+    <div id="campo-batalla" class="flex justify-center gap-5">
+      <div id="ataque-jugador" class="grid gap-2 w-52 rounded-2xl"> <img id="jugador-img" class="rounded-2xl" src="images/piedra.png" alt=""> <span class="flex justify-center font-bold text-white text-lg"> Jugador 1 </span> </div>
+      <div id="versus" class="flex items-center text-6xl pb-3 font-bold text-white"> VS </div>
+      <div id="ataque-pc" class="grid gap-2 w-52 rounded-2xl"> <img id="cpu-img" class="rounded-2xl" src="images/piedra.png" alt=""> <span class="flex justify-center font-bold text-white text-lg"> CPU </span> </div>
+    </div>
+    <div>
+      <h2 id="msj-batalla" class="flex justify-center py-4 font-bold text-white text-2xl"> ELIGE </h2>
+    </div>
+    <div class="flex justify-center gap-6">
+      <img id="btn-piedra" class="w-52 rounded-2xl" src="images/piedra.PNG" alt="">
+      <img id="btn-papel" class="w-52 rounded-2xl" src="images/papel.PNG" alt="">
+      <img id="btn-tijera" class="w-52 rounded-2xl" src="images/tijera.PNG" alt="">
+    </div>
+  </div>
+</body>
+<script src="/index.js"></script>
+</html>
