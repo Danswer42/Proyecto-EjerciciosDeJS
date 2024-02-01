@@ -27,13 +27,13 @@ btnTijera.addEventListener("click", function(){
 });
 
 function play(jugador){
-  jugadorImg.src = "images/"+jugador+".png";
+  jugadorImg.src = "images/" + jugador + ".png";
 
   msjBatalla.innerHTML = "Eligiendo"
 
   let interval = setInterval(function(){
     let cpu = calOpcioncpu();
-    cpuImg.src = "images/"+cpu+".png";
+    cpuImg.src = "images/" + cpu + ".png";
   }, 200);
 
   setTimeout(function () {
