@@ -39,6 +39,7 @@ function play(jugador){
   setTimeout(function () {
 
     clearInterval(interval);
+    
     let cpu = calOpcioncpu();
     let resultado = calcResultado(jugador,cpu);
 
@@ -58,7 +59,7 @@ function play(jugador){
       break;
   }
   }, 2000)
-  
+
 }
 
 function calOpcioncpu(){
