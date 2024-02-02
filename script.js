@@ -27,13 +27,13 @@ btnTijera.addEventListener("click", function(){
 });
 
 function play(jugador){
-  jugadorImg.src = "images/" + jugador + ".png";
+  jugadorImg.src = "images/" + jugador + ".PNG";
 
   msjBatalla.innerHTML = "Eligiendo"
 
   let interval = setInterval(function(){
     let cpu = calOpcioncpu();
-    cpuImg.src = "images/" + cpu + ".png";
+    cpuImg.src = "images/" + cpu + ".PNG";
   }, 200);
 
   setTimeout(function () {
@@ -43,7 +43,7 @@ function play(jugador){
     let cpu = calOpcioncpu();
     let resultado = calcResultado(jugador,cpu);
 
-    cpuImg.src = "images/" + cpu + ".png";
+    cpuImg.src = "images/" + cpu + ".PNG";
 
   /*switch se utiliza para evaluar una expresion ejecutar varios 
   bloques de codigos segun el valor de la expresion (Por casos)*/
