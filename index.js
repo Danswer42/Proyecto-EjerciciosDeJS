@@ -42,7 +42,7 @@ function play(jugador){
     let cpu = calOpcioncpu();
     let resultado = calcResultado(jugador,cpu);
 
-    cpuImg.src = "images/"+cpu+".png";
+    cpuImg.src = "images/" + cpu + ".png";
 
   /*switch se utiliza para evaluar una expresion ejecutar varios 
   bloques de codigos segun el valor de la expresion (Por casos)*/
