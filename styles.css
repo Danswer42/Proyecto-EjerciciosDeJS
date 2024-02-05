@@ -1,0 +1,39 @@
+/*Css del to do list*/
+li {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  list-style: none;
+}
+
+li p{
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-delete {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  border: none; 
+  padding: 0.375rem 1rem; 
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btn-delete:hover{
+  background-color: rgb(3 105 161);
+  color: #ffffff;
+  border-radius: 12px;
+}
