@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  
 </head>
 <body>
   <!-- Juego Piedra, papel o tijeras--> 
@@ -23,6 +25,30 @@
       <img id="btn-papel" class="w-52 rounded-2xl" src="images/papel.PNG" alt="">
       <img id="btn-tijera" class="w-52 rounded-2xl" src="images/tijera.PNG" alt="">
     </div>
+  </div>
+   
+  <!--To do List-->
+  <div class="bg-indigo-900 p-4"> 
+    <div class="bg-blue-400 grid content-center w-5/12 mx-auto py-4 px-2.5">
+      <h1 class="flex justify-center text-3xl pt-3 pb-3 font-bold text-white"> To do List </h1>
+      <div id="barra" class="flex justify-center gap-2 w-full mx-auto pt-4 px-2.5">
+        <input type="text" id="tarea" placeholder="Nueva tarea" class="bg-white p-2 w-3/6 rounded-xl outline-0 ">
+        <button id="btn-agregar" class="bg-white flex items-center py-1.5 px-4 text-black text-xl font-bold hover:bg-sky-700 hover:text-white rounded-xl"> + </button>
+      </div>
+      <div id="lista" class="grid content-center gap-2 w-8/12 mx-auto px-2.5">
+        <ul>
+        
+        </ul>
+      </div>
+      <div id="contenedor-vacio" class="flex justify-center py-1.5 px-4 text-white text-xl font-bold">
+        <p> No tienes tareas agregadas </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Cuadro que se mueve cuando se presiona una flecha-->
+  <div>
+
   </div>
 </body>
 <script src="script.js"></script>
