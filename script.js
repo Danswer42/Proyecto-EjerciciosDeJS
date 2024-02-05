@@ -1,4 +1,4 @@
-
+//Script del Juego de Piedra | Papel | Tijeras
 let campoBatalla = document.getElementById ("campo-batalla");
 let jugadorImg = document.getElementById ("jugador-img");
 let cpuImg = document.getElementById ("cpu-img");
@@ -88,4 +88,46 @@ function calcResultado(jugador,cpu){
     if(cpu === papel) return (ganaste);
   }
 }
+
+//Script del To do List
+let boton = document.getElementById ("barra");
+let tarea = document.getElementById ("tarea");
+let botonAgregar = document.getElementById ("btn-agregar");
+let lista = document.getElementById ("lista");
+let empty = document.getElementById ("contenedor-vacio");
+
+botonAgregar.addEventListener("click", function() {
+  if(tarea.value == ""){
+    return;
+  }
+
+  let elemento = tarea.value;
+
+  const li = document.createElement('li');
+  const p = document.createElement('p')
+  p.textContent = elemento;
+  li.appendChild(p);
+  lista.appendChild(li);
+  tarea.value = "";
+  empty.style.display = "none";
+
+  let btnEliminar = document.createElement("button");
+  btnEliminar.textContent = "x";
+  btnEliminar.className = "btn-delete";
+  li.appendChild(btnEliminar);
+
+  btnEliminar.addEventListener("click", function() {
+  li.remove();
+
+  const items = document.querySelectorAll("li");
+    if (items.length === 0) {
+      empty.style.display = "block";
+    }
+  });
+
+  tarea.value = "";
+});
+
+
+
 
