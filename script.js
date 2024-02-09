@@ -128,6 +128,62 @@ botonAgregar.addEventListener("click", function() {
   tarea.value = "";
 });
 
+//Script cuadro que se mueve cuando se presiona una flecha
+
+const hijo = document.getElementById('hijo');
+const step = 10; // Pixels to move
+
+document.addEventListener('keydown', function (event) {
+  const squareRect = document.getElementById('square').getBoundingClientRect();
+  const hijoRect = hijo.getBoundingClientRect();
+  switch (event.key) {
+    case 'ArrowLeft':
+      if (hijoRect.left > squareRect.left) {
+          hijo.style.left = `${parseInt(hijo.style.left || '0') - step}px`;
+      }
+      break;
+    case 'ArrowUp':
+      if (hijoRect.top > squareRect.top) {
+          hijo.style.top = `${parseInt(hijo.style.top || '0') - step}px`;
+      }
+      break;
+    case 'ArrowRight':
+      if (hijoRect.right < squareRect.right) {
+          hijo.style.left = `${parseInt(hijo.style.left || '0') + step}px`;
+      }
+      break;
+    case 'ArrowDown':
+      if (hijoRect.bottom < squareRect.bottom) {
+          hijo.style.top = `${parseInt(hijo.style.top || '0') + step}px`;
+      }
+      break;
+  }
+});
+
+//script calculadora
+const display = document.querySelector(".display");
+const buttons = document.querySelectorAll("button");
+const specialChars = ["%", "*", "/", "-", "+", "="];
+let output = "";
+
+const calculate = (btnValue) => {
+  display.focus();
+  if (btnValue === "=" && output !== "") {
+    output = eval(output.replace("%", "/100"));
+  } else if (btnValue === "AC") {
+    output = "";
+  } else if (btnValue === "DEL") {
+    output = output.toString().slice(0, -1);
+  } else {
+    if (output === "" && specialChars.includes(btnValue)) return;
+    output += btnValue;
+  }
+  display.value = output;
+};
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+});
 
 
 
